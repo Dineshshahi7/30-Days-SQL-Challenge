@@ -1,0 +1,38 @@
+# Set Operators
+-> Set operators in SQL combine the  results of multiple queries into a single result set.
+
+# Difference between SET OPERATORS and JOIN in SQL
+-> 
+- Set Operators are used to combine the results of two or more SELECT queries row-wise, whereas JOIN is used to combine data from two or more tables column-wise based on a common column. 
+
+- Set operators require the same number of columns with similar data types and include UNION, UNION ALL, INTERSECT, and EXCEPT/MINUS. They do not require any relationship between tables and UNION removes duplicate rows by default. In contrast, JOIN requires a relationship (primary key–foreign key) between tables and includes types such as INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.
+ 
+- Set operators merge similar data from different queries, while JOIN retrieves related data from different tables in a single result set.
+
+# Rules 
+
+* RULE 1 | SQL Clauses
+- SET Operator can be used almost in all clauses 
+  WHERE | JOIN| GROUP BY | HAVING
+- ORDER BY is allowed only once at the end of the query
+
+
+* RULE 2 | Number of Columns
+- The number of columns in each query must be same
+
+* RULE 3 | Data Types
+- Data types of columns in each query must be compatible
+
+* RULE 4 | Order of Columns
+- The order of the columns in each query must be the same
+
+* RULE 5 | Columns Aliases
+- The column names in the result set are determined by the column names specified in the first query
+- That's means first query controls the result set column names (second query ko column names totally unseen hunxa)
+
+* RULE 6 | Correct Columns
+- Even if all rules are met and SQL shows no errors, the result may be incorrect
+- Incorrect column selection leads to inaccurate results
+
+
+
