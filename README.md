@@ -9,3 +9,7 @@ On Day 2 of the 30-Days-of-SQL-Challenge, I practiced and explored key SQL conce
 ✔️ SQL Operators — compare and filter data using operators like =, >, <, BETWEEN, LIKE, IN, etc.
 ✔️ Aggregate Functions — perform calculations over multiple rows such as COUNT(), SUM(), AVG(), MIN(), MAX() to summarize data. 
 ✔️ JOINs — combine related rows from two or more tables using matching keys.
+
+## Day 3 — SQL: Set Operators & Their Rules
+🚀 What I Learned Today
+On Day 3 of the 30-Days-of-SQL-Challenge, I focused on understanding Set Operators in SQL, their rules, and how they differ from JOINs. This day helped me clearly understand how SQL combines result sets and how logical mistakes can occur even without runtime errors.
