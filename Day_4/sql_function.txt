@@ -1,0 +1,20 @@
+# SQL Function
+-> In SQL, a function is a reusable block of code that accepts parameters, performs a specific action or complex calculation, and then returns a value.
+-> In SQL, a function is a prewritten sub-program or set of SQL statements designed to perform a specific task, such as a calculation or data transformation, and return a single value or a table. 
+
+# Single-Row Functions (Scalar Functions)
+-> Single-row functions operate on a single row at a time and return one output value for every row in the result set. 
+   Like: DNESS ----> LOWER() -----> dness
+
+# Multiple-Row Functions (Aggregate Functions)
+-> Multiple-row functions act on a group of rows to return a single summarized result.
+  Like: 10, 20, 30, 40 -----> SUM() -----> 100
+
+# Why SQL Functions are Used ?
+-> Code Reusability: They allow developers to write a logic once and reuse it across multiple queries or applications, reducing redundancy.
+
+-> Simplifying Complex Queries: Functions can encapsulate complicated logic, making the main query more readable and easier to maintain.
+
+-> Data Consistency: Using the same function ensures that specific calculations (like tax or currency conversion) are performed uniformly across the entire database.
+
+-> Data Transformation: They are essential for "cleaning" or formatting data—such as converting text to uppercase or calculating the difference between two dates—directly within the database. 
