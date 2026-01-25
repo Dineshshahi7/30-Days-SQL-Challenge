@@ -1,0 +1,25 @@
+# What is NULL ?
+-> The term null generally signifies the absence of a value. NULL means noting, unknown. NULL is not equal to anything.
+- NULL is not zero
+- NULL is not empty string
+- NULL is not blank space
+
+# ISNULL()
+-> Replace the 'NULL' with a specified value.
+- syntax: ISNULL(value, replacement_value)
+
+# COALESCE()
+-> Returns the first non-null value from a list.
+- syntax: COALESCE(value1, value2, value3, ......)
+
+# Difference between ISNULL() and COALESCE
+-> 
+= ISNULL
+- Limited to two values
+- Fast
+- SQL server, Oracle, MySQL
+
+= COALESCE
+- Unlimited
+- slow
+- Available in all databases
