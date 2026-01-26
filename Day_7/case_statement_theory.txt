@@ -1,0 +1,172 @@
+USE Statement
+
+Definition:
+The USE statement selects a specific database as the active database for the current session.
+
+How it works:
+After a database is selected using USE, all subsequent SQL operations such as reading, inserting, updating, or deleting data are performed on that database unless another database is specified.
+
+Why it is important:
+It prevents ambiguity when multiple databases exist and ensures queries run on the correct dataset.
+
+SELECT Statement
+
+Definition:
+The SELECT statement is used to retrieve data from one or more tables in a database.
+
+How it works:
+It allows users to choose specific columns or computed results and display them in the query output.
+
+Why it is important:
+SELECT is the foundation of data retrieval and reporting in SQL.
+
+FROM Clause
+
+Definition:
+The FROM clause specifies the source table(s) from which data is retrieved.
+
+How it works:
+SQL identifies where the data exists before applying filters, grouping, or calculations.
+
+Why it is important:
+Without FROM, SQL would not know where to retrieve the data from.
+
+CASE Statement
+
+Definition:
+The CASE statement is a conditional expression in SQL that returns different values based on specified conditions, similar to an if-else structure in programming languages.
+
+How it works:
+SQL evaluates conditions in order and returns the result associated with the first true condition. If no condition is met, a default result is returned.
+
+Why it is important:
+It is widely used for categorizing data, transforming values, handling business logic, and improving report readability.
+
+Subquery (Derived Table)
+
+Definition:
+A subquery is a query nested inside another SQL statement.
+
+How it works:
+The inner query executes first, and its result is used by the outer query as a temporary dataset.
+
+Why it is important:
+Subqueries enable complex calculations, intermediate transformations, and modular query design.
+
+Aggregate Functions
+Definition
+
+Aggregate functions perform calculations on multiple rows and return a single summarized value.
+
+Common Aggregates
+
+SUM: Calculates total values
+
+COUNT: Counts rows
+
+AVG: Calculates average
+
+MIN / MAX: Finds smallest or largest values
+
+Why they are important
+
+They are essential for summarizing data, generating reports, and analyzing trends.
+
+GROUP BY Clause
+
+Definition:
+GROUP BY groups rows that share the same values into summary rows.
+
+How it works:
+Aggregate functions operate on each group separately rather than on the entire dataset.
+
+Why it is important:
+It allows meaningful aggregation such as totals per category, customer, or time period.
+
+ORDER BY Clause
+
+Definition:
+ORDER BY sorts the result set based on one or more columns.
+
+How it works:
+Sorting can be done in ascending or descending order.
+
+Why it is important:
+It improves data readability and is commonly used in reporting and dashboards.
+
+Column and Table Aliases
+
+Definition:
+Aliases provide temporary, readable names for columns or tables.
+
+How it works:
+They exist only during query execution and do not affect the database structure.
+
+Why it is important:
+Aliases make complex queries easier to understand and outputs more user-friendly.
+
+NULL Values
+
+Definition:
+NULL represents missing, unknown, or undefined data.
+
+How it works:
+NULL is not equal to zero or an empty string and requires special handling.
+
+Why it is important:
+Improper handling of NULL values can lead to incorrect calculations and misleading results.
+
+Handling NULL Values
+
+Definition:
+Handling NULL values means replacing or managing missing data to ensure accurate results.
+
+How it works:
+Logical expressions or built-in functions can substitute NULL values with meaningful defaults.
+
+Why it is important:
+Ensures data accuracy, consistency, and reliable decision-making.
+
+Window Functions
+
+Definition:
+Window functions perform calculations across a set of rows related to the current row without collapsing the result set.
+
+How it works:
+They compute results over a defined window of data while preserving individual rows.
+
+Why it is important:
+Used for running totals, averages, rankings, and advanced analytics.
+
+OVER Clause
+
+Definition:
+The OVER clause defines the window or range of rows for a window function.
+
+How it works:
+It controls how rows are grouped or ordered for calculation purposes.
+
+Why it is important:
+It enables advanced analytical operations without grouping data.
+
+Conditional Aggregation
+
+Definition:
+Conditional aggregation applies conditions inside aggregate functions.
+
+How it works:
+Only rows meeting specific criteria contribute to the aggregate result.
+
+Why it is important:
+It allows flexible, business-specific summaries without complex filtering.
+
+WHERE vs HAVING (Conceptual Difference)
+
+WHERE:
+Filters individual rows before grouping.
+
+HAVING:
+Filters grouped results after aggregation.
+
+Why it matters:
+Understanding this difference is crucial for writing correct analytical queries.
