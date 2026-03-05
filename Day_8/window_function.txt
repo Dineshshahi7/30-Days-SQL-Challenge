@@ -1,0 +1,132 @@
+🔹 What is a Window Function?
+
+A window function is a SQL feature that performs calculations across a logical group of rows related to the current row, while keeping each row visible in the result.
+
+In simple words:
+➡️ It adds analytical information to each row without reducing the number of rows.
+
+🔹 Why Window Functions Are Needed
+
+Traditional aggregation groups data and reduces rows. Window functions solve problems where:
+
+You need totals, averages, or rankings
+
+But you also need row-level details
+
+You want to compare rows with previous or next rows
+
+You need running totals or moving averages
+
+They are heavily used in data analysis, reporting, and business intelligence.
+
+🔹 Key Characteristics
+
+They do not collapse rows
+
+They work on a window (subset) of data
+
+The window is defined per row
+
+Results are displayed alongside original data
+
+🔹 What Is a “Window”?
+
+A window is a set of rows related to the current row.
+
+The window can be:
+
+The entire table
+
+A group of rows (like per customer or product)
+
+Rows ordered by time (date-based windows)
+
+Each row can have a different window.
+
+🔹 Components of a Window Function
+
+A window function is conceptually defined by three things:
+
+1️⃣ Partitioning
+
+Divides data into logical groups.
+Each group is processed independently.
+
+Example concept:
+
+Sales per customer
+
+Sales per product
+
+Salary per department
+
+2️⃣ Ordering
+
+Defines the sequence of rows inside a partition.
+
+Used when:
+
+Calculating running totals
+
+Finding previous or next values
+
+Ranking data
+
+3️⃣ Frame
+
+Specifies how many rows are considered for calculation.
+
+Examples of frames:
+
+From the start up to the current row
+
+Previous 2 rows and current row
+
+Entire partition
+
+Frames are useful for moving averages and cumulative calculations.
+
+🔹 Types of Window Functions
+1️⃣ Aggregate Window Functions
+
+They compute aggregate values over a window.
+
+Used for:
+
+Total
+
+Average
+
+Maximum
+
+Minimum
+
+Each row still appears in the result.
+
+2️⃣ Ranking Window Functions
+
+They assign rankings or numbers to rows.
+
+Common uses:
+
+Top-selling products
+
+Highest-paid employees
+
+Ranking students by marks
+
+They help in sorting, ranking, and tie-handling.
+
+3️⃣ Value Window Functions
+
+They access values from other rows.
+
+Used for:
+
+Comparing current row with previous row
+
+Finding trends
+
+Calculating growth or difference
+
+These are essential for time-series analysis.
