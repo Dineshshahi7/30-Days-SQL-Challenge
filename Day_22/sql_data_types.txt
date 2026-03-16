@@ -1,0 +1,161 @@
+SQL Data Types
+In SQL, each column (in a table) has a data type. This restricts the type of data that can be stored in that column.
+
+Example
+CREATE TABLE Employees (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  age INTEGER,
+  salary REAL
+);
+
+SQL Server Data Types
+The data types supported by SQL Server are,
+
+Numeric Data Types
+Data Type	Description
+BIT	can store single bit (0 or 1) or NULL
+TINYINT	can store numbers from 0 to 255
+SMALLINT	can store numbers from -32,768 to 32,767
+INT	can store numbers between -2,147,483,648 and 2,147,483,647
+BIGINT	can store numbers between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807
+String Data Types
+Data Type	Description
+CHAR(x)	can store characters of fixed length (max 8000 characters)
+VARCHAR(x)	can store characters up to given length (max 8000 characters)
+TEXT	can store characters up to 2 GB size
+IMAGE	can store binary string up to 2 GB size
+Date and Time Data Types
+Data Type	Description
+DATETIME	can store date from January 1, 1753 to December 31, 9999 with time
+DATETIME2	can store date from January 1, 0001 to December 31, 9999 with time
+DATE	can only store date from January 1, 0001 to December 31, 9999
+TIME	can store only time
+Note: There are many other data types supported by SQL Server. To read more, visit SQL Server documentation.
+
+MySQL Data Types
+The data types supported by MySQL are,
+
+Numeric Data Types
+Data Type	Description
+BIT(x)	can store x-bit values. x can range from 1 to 64
+TINYINT	can store numbers from -128 to 127
+SMALLINT	can store numbers from -32768 to 32767
+MEDIUMINT	can store numbers from -8,388,608 to 8,388,607
+INT	can store numbers from -2,147,483,648 to 2,147,483,647
+BIGINT	can store numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+DECIMAL(x, y)	can store decimal number of total x digits (max up to 65) of which y digits (max up to 30) are allocated after the decimal point
+String Data Types
+Data Type	Description
+CHAR(x)	can store characters of fixed length (max 8000 characters)
+VARCHAR(x)	can store characters up to given length (max 8000 characters)
+BINARY(x)	can store binary strings of fixed length
+VARBINARY(x)	can store binary strings up to given length
+TINYTEXT	can store up to 255 characters
+TEXT(x)	can store characters up to the given limit (max 65,535 bytes)
+MEDIUMTEXT	can store characters up to 16,777,215 characters
+LONGTEXT	can store characters up to 4,294,967,295 characters
+BLOB(x)	can store binary large object up to 65,535 bytes
+MEDIUMBLOB	can store binary large object up to 16,777,215 bytes
+LONGBLOB	can store binary large object up to 4,294,967,295 bytes
+
+SQL Server Data Types
+The data types supported by SQL Server are,
+
+Numeric Data Types
+Data Type	Description
+BIT	can store single bit (0 or 1) or NULL
+TINYINT	can store numbers from 0 to 255
+SMALLINT	can store numbers from -32,768 to 32,767
+INT	can store numbers between -2,147,483,648 and 2,147,483,647
+BIGINT	can store numbers between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807
+String Data Types
+Data Type	Description
+CHAR(x)	can store characters of fixed length (max 8000 characters)
+VARCHAR(x)	can store characters up to given length (max 8000 characters)
+TEXT	can store characters up to 2 GB size
+IMAGE	can store binary string up to 2 GB size
+Date and Time Data Types
+Data Type	Description
+DATETIME	can store date from January 1, 1753 to December 31, 9999 with time
+DATETIME2	can store date from January 1, 0001 to December 31, 9999 with time
+DATE	can only store date from January 1, 0001 to December 31, 9999
+TIME	can store only time
+Note: There are many other data types supported by SQL Server. To read more, visit SQL Server documentation.
+
+MySQL Data Types
+The data types supported by MySQL are,
+
+Numeric Data Types
+Data Type	Description
+BIT(x)	can store x-bit values. x can range from 1 to 64
+TINYINT	can store numbers from -128 to 127
+SMALLINT	can store numbers from -32768 to 32767
+MEDIUMINT	can store numbers from -8,388,608 to 8,388,607
+INT	can store numbers from -2,147,483,648 to 2,147,483,647
+BIGINT	can store numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+DECIMAL(x, y)	can store decimal number of total x digits (max up to 65) of which y digits (max up to 30) are allocated after the decimal point
+String Data Types
+Data Type	Description
+CHAR(x)	can store characters of fixed length (max 8000 characters)
+VARCHAR(x)	can store characters up to given length (max 8000 characters)
+BINARY(x)	can store binary strings of fixed length
+VARBINARY(x)	can store binary strings up to given length
+TINYTEXT	can store up to 255 characters
+TEXT(x)	can store characters up to the given limit (max 65,535 bytes)
+MEDIUMTEXT	can store characters up to 16,777,215 characters
+LONGTEXT	can store characters up to 4,294,967,295 characters
+BLOB(x)	can store binary large object up to 65,535 bytes
+MEDIUMBLOB	can store binary large object up to 16,777,215 bytes
+LONGBLOB	can store binary large object up to 4,294,967,295 bytes
+Date and Time Data Types
+Data Type	Description
+DATE	can store date in format of YYYY-MM-DD ranging from 1000-01-01 to 9999-12-31
+DATETIME	can store date and time in format of YYYY-MM-DD hh:mm:ss 
+TIME
+can only store time in format of hh:mm:ss ranging from -838:59:59 to 838:59:59
+YEAR	can store year in 4 digits format ranging from 1901 to 2155
+TIMESTAMP	can store timestamp from the current time zone to UTC 
+Note: There are more data types supported by MySQL. To read more, visit MySQL documentation.
+
+PostgreSQL Data Types
+
+The data types supported by PostgreSQL are,
+
+Numeric Data Types
+Data Type	Description
+SMALLINT	can store numbers between -32,768 to 32,767
+INTEGER	can store numbers between -2,147,483,648 and 2,147,483,647
+BIGINT	can store numbers between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807
+DECIMAL	can store numbers up to 131072 digits before the decimal point; up to 16383 digits after the decimal point
+SMALLSERIAL	can store small auto incrementing number from 1 to 32767
+SERIAL	can store auto incrementing number from 1 to 2147483647
+BIGSERIAL	can store big auto incrementing number from 1 to 9223372036854775807
+String Data Types
+Data Type	Description
+CHAR(x)	can store characters of fixed length
+VARCHAR(x)	can store characters up to given length
+TEXT	can store characters without limitation
+Date and Time Data Types
+Data Type	Description
+TIMESTAMP	can store date and time
+DATE	can store only date
+TIME	can store only time
+Note: There are more data types supported by PostgreSQL. To read more, visit PostgreSQL documentation
+
+Oracle Data Types
+The data types supported by Oracle are,
+
+Numeric Data Types
+Data Type	Description
+NUMBER	can store numbers
+String Data Types
+Data Type	Description
+CHAR(x)	can store characters of fixed length up to 2000 bytes or characters
+VARCHAR(x)	can store characters up to given length (max is 4000 bytes or characters)
+LONG	can store characters up to 2 GB
+Date and Time Data Types
+Data Type	Description
+TIMESTAMP	can store date and time
+DATE	can only store date from January 1, 4712 BC to December 31, 9999 AD
+TIME	can only store time

@@ -1,0 +1,70 @@
+SQL Comments
+In SQL, comments are descriptions in the code that help users better understand the intent and functionality of the SQL command. For example,
+
+/* This is a multi-line
+comment in SQL. */
+
+-- This is a single-line comment in SQL.
+They are completely ignored by database management systems.
+
+Types of Comments
+There are mainly two types of comments in SQL. They are:
+
+Single-line Comments
+Multi-line Comments
+Single-line Comments
+In SQL, we use the double dash, --, to write a single-line comment. The comment starts from -- and ends with the end of line. For example,
+
+-- fetch all records from the Students table
+SELECT *
+FROM Students;
+Run Code
+Here, the comment is
+
+-- fetch all records from the Students table
+Database systems completely ignore this line during code sql-execution.
+
+Comments With Statements
+It's also possible to include comments in the same line as an sql-executable SQL statement. For example,
+
+SELECT * -- select all records
+FROM Students; -- from the Students table
+Run Code
+Here, the comments are
+
+-- select all records
+-- from the Students table
+
+Multi-line Comments
+
+In SQL, a multi-line comment starts with /* and ends with */. For example,
+
+/* selecting all records
+from the
+Students table */
+SELECT *
+FROM Students;
+Run Code
+Here, anything between /* and */ is a comment and is ignored by database management systems.
+
+Comments Within Statements
+Similar to single-line comments, it's also possible to include multi-line comments in the same line as an sql-executable SQL statement. For example,
+
+SELECT *
+FROM /* table name here */ Students;
+Run Code
+Here, anything between /* and */ is a comment and is ignored by database management systems.
+
+Using Comments to Debug Code
+Suppose, we want to skip certain SQL statements from sql-execution. In such cases, instead of removing the statements, we can simply comment it out.
+
+This helps us to test our SQL code without removing them completely. For example,
+
+/* SELECT *
+FROM Customers; */
+-- the above statement is ignored by DBMS
+
+SELECT *
+FROM Students;
+Run Code
+Here, SQL will only fetch records from the Students table while ignoring the command to fetch records from the Customers table.
