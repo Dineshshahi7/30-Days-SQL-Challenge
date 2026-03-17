@@ -1,0 +1,117 @@
+SQL Commands: DDL, DML, DQL, DCL, TCL
+Data Definition Language (DDL)
+Data Definition Language (DDL) commands are used for defining the database structure or schema.
+
+Let's look at some DDL commands with a simple example for each command.
+
+i. CREATE
+In SQL, the CREATE TABLE command is used to create a new table in the database. For example,
+
+CREATE TABLE Products (
+    product_id INT,
+    name VARCHAR(100),
+    price DECIMAL
+);
+Run Code
+Here, the SQL command creates a new table named Products with three columns: product_id (integer type), name (string type up to 100 characters), and price (decimal type for storing prices).
+
+ii. ALTER TABLE
+In SQL, the ALTER TABLE command is used to modify the structure of an existing table like adding, deleting, renaming columns, etc.
+
+Let's look at an example.
+
+-- add email column to Customers table
+ALTER TABLE Customers
+ADD email VARCHAR(100);
+Run Code
+Here, the SQL command adds a column named email to the Customers table.
+
+iii. DROP TABLE
+In SQL, the DROP TABLE command is used to delete the specified table in our database. For example,
+
+-- delete Orders table
+DROP TABLE Orders;
+Run Code
+Here, the SQL command will delete the table named Orders.
+
+Data Manipulation Language (DML)
+DML (Data Manipulation Language) are SQL commands focused on handling data within the database, including most SQL statements.
+
+Let's look at some DML commands with a simple example for each command.
+
+i. INSERT INTO
+In SQL, the INSERT INTO statement is used to insert new rows into a database table. For example,
+
+-- insert a row in the Customers table
+INSERT INTO Customers (customer_id, first_name, last_name, age, country)
+VALUES (6, 'Alice', 'Brown', 30, 'Canada');
+Run Code
+Here, the SQL command inserts a new row into the Customers table with the given values.
+
+ii. UPDATE
+
+The SQL UPDATE statement is used to edit an existing row in a database table.
+
+Let's look at an example.
+
+-- update a single value in the given row
+UPDATE Customers
+SET age = 29
+WHERE customer_id = 5;
+Run Code
+This command updates the age field of the customer with customer_id 5 to 29.
+
+iii. DELETE
+The SQL DELETE statement is used to delete row(s) from a database table. For example,
+
+DELETE FROM Customers
+WHERE country = 'UAE';
+Run Code
+Here, the SQL command deletes all rows from the Customers table where the country is UAE.
+
+Data Query Language (DQL)
+DQL is used for querying and retrieving data from a database. It allows us to specify the exact data we want to see from one or more tables based on given conditions.
+
+SELECT
+In SQL, the SELECT statement is used to select (retrieve) data from a database table. For example,
+
+SELECT * FROM Customers
+WHERE country = 'UK';
+Run Code
+Here, the SQL command retrieves all rows from the Customers table where the country is UK.
+
+Data Control Language (DCL)
+DCL commands include GRANT and REVOKE, which are used to control access to the database.
+
+i. GRANT
+In SQL, the GRANT statement gives users access privileges to the database. For example,
+
+GRANT SELECT, UPDATE ON Customers TO user1;
+This command grants SELECT and UPDATE permissions on the Customers table to user1.
+
+ii. REVOKE
+In SQL, the REVOKE statement withdraws access privileges given by the GRANT statement.
+
+Let's look at an example.
+
+REVOKE SELECT ON Customers FROM user1;
+Here, the SQL query revokes SELECT permission on the Customers table from user1.
+
+Transaction Control Language (TCL)
+In SQL, TCL commands manage changes affecting the database.
+
+i. COMMIT
+In SQL, the COMMIT command is used for saving the changes made in the database. For example,
+
+UPDATE Customers
+SET country = 'UK'
+WHERE customer_id = 4;
+COMMIT;
+Here, the SQL command updates the country of the customer with customer_id 4 and commits the transaction.
+
+ii. ROLLBACK
+In SQL, ROLLBACK is used to undo the transactions that have not been saved in the database. For example,
+
+DELETE FROM Orders;
+ROLLBACK;
+Here, the query deletes all records from the Orders table but then rolls back the transaction.
