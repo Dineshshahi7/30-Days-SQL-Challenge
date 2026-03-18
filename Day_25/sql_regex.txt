@@ -1,0 +1,54 @@
+SQL REGEXP
+The REGEXP operator in SQL is a powerful tool for matching complex string patterns. It is used for extracting information based on specific patterns rather than simple character matches.
+
+Example
+SELECT *
+FROM Orders
+WHERE item REGEXP 'Mouse|Keyboard';
+
+Here, the SQL command selects orders where the item is either Mouse or Keyboard.
+
+SQL REGEXP With WHERE Clause
+The REGEXP operator can be effectively combined with a WHERE clause for precise pattern matching. For example,
+
+SELECT *
+FROM Customers
+WHERE first_name REGEXP '^J';
+Here, the SQL command returns those customers whose first names start with J.
+
+Note: Our online compiler is based on SQLite, which doesn't support the REGEXP operator by default.
+
+REGEXP in UPDATE Statements
+The REGEXP operator can also be used in UPDATE statements to modify data based on complex patterns. For example,
+
+UPDATE Shippings
+SET status = 'Processing'
+WHERE status REGEXP 'Pending|Delivered';
+
+SELECT * FROM Shippings;
+This SQL command updates the status column in the Shippings table to Processing for shipments with Pending or Delivered status.
+
+Chaining REGEXP Operators
+
+Multiple REGEXP operators can be chained for complex pattern matching. For example,
+
+SELECT *
+FROM Customers
+WHERE country
+REGEXP 'USA|UK' AND age REGEXP '2[0-9]';
+This query finds customers from either the USA or UK who are in their twenties.
+
+Validate Email Addresses With SQL REGEXP
+Using SQL's REGEXP operator, we can validate email addresses based on standard email formatting rules.
+
+Let's look at an example.
+
+SELECT * FROM Customers
+WHERE email
+REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$';
+The REGEXP pattern here breaks down as follows:
+
+^[A-Za-z0-9._%+-]+ - the email must start with one or more alphanumeric characters, dots, underscores, percent signs, plus signs, or hyphens.
+@ - this is the mandatory at symbol in an email address.
+[A-Za-z0-9.-]+ - after the at symbol, the email must have one or more alphanumeric characters, dots, or hyphens.
+\.[A-Za-z]{2,4}$ - the email must end with a period followed by 2 to 4 alphabetic characters, which represent the domain part.
