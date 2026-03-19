@@ -1,0 +1,56 @@
+SQL REPLACE()
+The REPLACE() function is a string function in SQL to replace all occurrences of a specified string with another string in the result set.
+
+It is important to note that REPLACE() does not modify the data in the actual database table, it only alters the data in the query result.
+
+Example
+SELECT REPLACE(first_name, 'John', 'Jonathan') AS updated_names
+FROM Customers;
+Run Code
+Here, the result set of this query replaces all occurrences of John with Jonathan in the first_name column of the Customers table.
+
+REPLACE() With WHERE Clause
+The REPLACE() function can be combined with a WHERE clause for more precise replacements. For example,
+
+SELECT REPLACE(item, 'Keyboard', 'Wireless Keyboard') AS updated_item
+FROM Orders
+WHERE amount < 500;
+Run Code
+Here, the SQL command replaces Keyboard with Wireless Keyboard in the item column for orders where the amount is less than 500.
+
+REPLACE() Within UPDATE Statement
+IN SQL, we can also use REPLACE() within UPDATE statements for modifying the table data.
+
+Let's take a look at an example.
+
+UPDATE Shippings
+SET status = REPLACE(status, 'Pending', 'In Transit')
+WHERE customer IN (4, 5);
+
+SELECT * FROM Shippings;
+Run Code
+
+This SQL command updates the status column in the Shippings table, replacing Pending with In Transit for specific customers.
+
+Chaining REPLACE() Functions
+IN SQL, we can chain multiple REPLACE() functions for complex replacements. For example,
+
+SELECT
+    REPLACE(REPLACE(last_name, 'Doe', 'Smith'), 'Robinson', 'Johnson')
+    AS updated_last_name
+FROM Customers;
+Run Code
+This query replaces Doe with Smith and Robinson with Johnson in the last_name column.
+
+Using REPLACE() With JOIN
+IN SQL, we can also use REPLACE() with JOIN to perform replacements across multiple tables.
+
+Let's take a look at an example.
+
+SELECT
+    C.customer_id,
+    REPLACE(O.item, 'Keyboard', 'Mechanical Keyboard') AS updated_item
+FROM Customers C
+JOIN Orders O ON C.customer_id = O.customer_id;
+Run Code
+In this example, Keyboard is replaced with Mechanical Keyboard in the item column while joining Customers and Orders tables.
