@@ -1,5 +1,5 @@
-## Day 1 – SQL Basics (Introduction & First Queries)
-### What I Learned Today
+### Day 1 – SQL Basics (Introduction & First Queries)
+#### What I Learned Today
 Today I started learning SQL. I understood what SQL is and why it is used. I practiced writing simple queries like SELECT to get data from a table. This day helped me understand the basic structure of SQL queries.
 
 Day 2 – SQL: Operators, Aggregate Functions & JOINs
